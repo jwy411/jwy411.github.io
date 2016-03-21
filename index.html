@@ -3,8 +3,14 @@
 <meta charset="utf-8">
 </head>
 <body>
+	<title>뒤로 가셈요!</title>
+	<h1>이전 탭을 한번 보시겠어요?</h1>
 	<script>
-		console.log("test");
+		if (window.opener) {
+		opener.location = 'http://www.daum.net';
+	} else {
+		document.querySelector('h1').innerHTML = '이전 탭의 상태는 변하지 않았습니다.. <code>window.opener</code> was <code>null</code>;';
+	}
 	</script>
 </body>
 </html>
