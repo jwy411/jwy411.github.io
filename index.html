@@ -101,7 +101,9 @@
     function getChannel() {
         gapi.client.youtube.search.list({
             'part': 'snippet,id',
-            'q': '베틀그라운드'
+            'q': '배틀그라운드',
+            'type': 'video',
+            'eventType': 'live'
         }).then(function(response) {
             console.log(response);
         });
