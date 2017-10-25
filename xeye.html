@@ -23,7 +23,7 @@
     }
 
     .item {
-        width: 50%;
+        width: 100%;
         min-height: 1px;
         padding-right: 5px;
         padding-left: 5px;
@@ -78,7 +78,6 @@
 </style>
 <body>
 <div class="demobox">
-    <p>You can apply infinite scrolling in the oveflow:scroll area.</p>
     <div id="grid" class="row"></div>
 </div>
 </body>
@@ -104,7 +103,7 @@
         var ig = new eg.InfiniteGrid("#grid", {
             count: 100,
             defaultGroupKey: 0,
-            isOverflowScroll: true
+            isOverflowScroll: false
         })
             .on({
                 "append": function (e) {
